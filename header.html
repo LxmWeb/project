@@ -1,51 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>登录</title>
-    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="public/css/basic.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>题库系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="public/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="public/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="public/css/dashboard.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="public/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="public/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
+
 <body>
-<div id="header">
-    <nav class="navbar navbar-default" role="navigation">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <a href="#" class="navbar-brand">题库系统</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">题库系统</a>
         </div>
-        <ul class="nav navbar-nav navbar-right user">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    林小明 <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">修改个人信息</a></li>
-                    <li><a href="#">退出登录</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</div>
-
-<div id="left-nav">
-    <ul class="nav">
-        <li class=""><a href="##">Home</a></li>
-        <li><a href="##">CSS3</a></li>
-        <li><a href="##">Sass</a></li>
-        <li><a href="##">jQuery</a></li>
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Java <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="#">jmeter</a></li>
-                <li><a href="#">EJB</a></li>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> 管理员</a></li>
+                <li><a href="#">退出登录</a></li>
             </ul>
-        </li>
-    </ul>
+            <form class="navbar-form navbar-right">
+                <div class="input-group">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button" id="btn-search">
+                    搜索
+                </button>
+              </span>
+                    <input type="text" class="form-control" placeholder="请输入关键字">
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid">
+
 </div>
-</body>
 
-<script src="public/js/jquery-3.2.1.min.js"></script>
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="public/js/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="public/js/jquery.min.js"><\/script>')</script>
 <script src="public/bootstrap/js/bootstrap.js"></script>
-
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="public/js/vendor/holder.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="public/assets/js/ie10-viewport-bug-workaround.js"></script>
+</body>
 </html>

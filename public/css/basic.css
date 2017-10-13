@@ -1,8 +1,13 @@
 .user {
     margin-right: 1%;
 }
-#left-nav {
+#left-nav ul{
     width: 150px;
     height: 100%;
+    background-color: #f5f5f5;
     color: #000;
+}
+
+.sidebar-title {
+    padding: 10px;
 }

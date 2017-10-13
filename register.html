@@ -3,17 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-
+    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="public/css/login.css">
 </head>
 <body>
-    <div>
-        <form action="post">
-
-        </form>
+    <div class="login-pane">
+    <h2 class="login-title">用户注册</h2>
+    <div class="container-fluid login-form">
+        <div class="row">
+            <form action="" method="post" role="form" class="form-horizontal">
+                <div class="form-group">
+                    <label for="id" class="col-md-3 control-label">工号:</label>
+                    <div class="col-md-7">
+                        <input id="id" type="text" class="form-control" placeholder="请输入工号" name="id" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="username" class="col-md-3 control-label">用户名:</label>
+                    <div class="col-md-7">
+                        <input id="username" type="text" class="form-control" placeholder="请输入用户名" name="username" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd" class="col-md-3 control-label">密码:</label>
+                    <div class="col-md-7">
+                        <input id="pwd" type="password" class="form-control" placeholder="请输入密码" name="pwd" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="pwd-sure" class="col-md-3 control-label">确认密码:</label>
+                    <div class="col-md-7">
+                        <input id="pwd-sure" type="password" class="form-control" placeholder="请再次输入密码" name="pwd-sure" value="">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-3 col-md-2">
+                        <button class="btn btn-primary" id="register">注册</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button class="btn btn-default">返回</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
 </body>
 
-<script src="public/js/bootstrap.min.js"></script>
-<script src="public/js/jquery.js"></script>
+<script src="public/js/jquery.min.js"></script>
+<script src="public/bootstrap/js/bootstrap.js"></script>
+<script src="public/js/login.js"></script>
+
 </html>

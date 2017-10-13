@@ -4,50 +4,58 @@
     <meta charset="UTF-8">
     <title>登录</title>
     <link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="public/css/login.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <form action="" method="post" role="form" class="form-horizontal">
-            <div class="form-group">
-                <label for="username" class="col-md-1 control-label">用户名:</label>
-                <div class="col-md-2">
-                    <input id="username" type="text" class="form-control" placeholder="请输入用户名" name="username" value="">
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="pwd" class="col-md-1 control-label">密码:</label>
-                <div class="col-md-2">
-                    <input id="pwd" type="text" class="form-control" placeholder="请输入密码" name="pwd" value="">
-                </div>
-            </div>
-            <!--<div class="form-group">-->
-                <!--<label for="code" class="col-md-1 control-label">验证码</label>-->
-                <!--<div class="col-md-1">-->
+    <div class="login-pane">
+        <h2 class="login-title">用户登录</h2>
+        <div class="container-fluid login-form">
+            <div class="row">
+                <form action="" method="post" role="form" class="form-horizontal">
+                    <div class="form-group">
+                        <label for="username" class="col-md-3 control-label">用户名:</label>
+                        <div class="col-md-7">
+                            <input id="username" type="text" class="form-control" placeholder="请输入用户名" name="username" value="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd" class="col-md-3 control-label">密码:</label>
+                        <div class="col-md-7">
+                            <input id="pwd" type="password" class="form-control" placeholder="请输入密码" name="pwd" value="">
+                        </div>
+                    </div>
+                    <!--<div class="form-group">-->
+                    <!--<label for="code" class="col-md-1 control-label">验证码</label>-->
+                    <!--<div class="col-md-1">-->
                     <!--<input id="code" type="text" class="form-control" placeholder="验证码" name="code" value="">-->
-                <!--</div>-->
-            <!--</div>-->
-            <div class="form-group">
-                <label for="pwd" class="col-md-1 control-label">身份:</label>
-                <div class="col-md-2">
-                    <label class="radio-inline">
-                        <input type="radio"  name="status" id="teacher" value="teacher" checked> 教师
-                    </label>
-                    <label class="radio-inline">
-                        <input type="radio"  name="status" id="admin" value="admin"> 管理员
-                    </label>
-                </div>
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label for="pwd" class="col-md-3 control-label">身份:</label>
+                        <div class="col-md-7">
+                            <label class="radio-inline">
+                                <input type="radio"  name="status" id="teacher" value="teacher" checked> 教师
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio"  name="status" id="admin" value="admin"> 管理员
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-md-2">
+                            <button class="btn btn-primary">登录</button>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-default">注册</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <div class="col-md-offset-1 col-md-2">
-                    <button class="btn btn-primary">登录</button>
-                    <button class="btn btn-default">注册</button>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
 </body>
 
-<script src="public/js/jquery-3.2.1.min.js"></script>
+<script src="public/js/jquery.min.js"></script>
 <script src="public/bootstrap/js/bootstrap.js"></script>
 
 </html>
