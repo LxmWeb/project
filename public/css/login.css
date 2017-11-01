@@ -1,5 +1,6 @@
 body {
-  background-image: url('/public/img/login-bg.jpg');
+  background-image: url('/public/img/login-bg.png');
+  /*background-size: cover;*/
 }
 .login-pane {
   margin-top: 200px;

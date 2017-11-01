@@ -12,19 +12,19 @@
     <title>题库系统</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="public/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="public/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="/public/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="public/css/dashboard.css" rel="stylesheet">
+    <link href="/public/css/dashboard.css" rel="stylesheet">
 
     <link rel="stylesheet" href="public/css/basic.css">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="public/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="public/assets/js/ie-emulation-modes-warning.js"></script>
+    <!--[if lt IE 9]><script src="/public/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/public/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -76,15 +76,27 @@
               </a>
             </li>
             <li><a href="#">添加用户</a></li>
+            <li><a href="#">权限设置</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li class="sidebar-title">课程管理</li>
-            <li><a href="#">添加课程</a></li>
+            <li><a href="#">课程列表</a></li>
+            <li><a href="#">我的课程</a></li>
+
           </ul>
           <ul class="nav nav-sidebar">
             <li class="sidebar-title">查询</li>
             <li><a href="#">课程查询</a></li>
-            <li><a href="#">试题查询</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="sidebar-title">知识点管理</li>
+            <li><a href="#">知识点列表</a></li>
+            <li><a href="#">添加知识点</a></li>
+          </ul>
+          <ul class="nav nav-sidebar">
+            <li class="sidebar-title">题库管理</li>
+            <li><a href="#">录入试题</a></li>
+            <li><a href="#">试题列表</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -102,24 +114,164 @@
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
+                  <th>工号</th>
+                  <th>姓名</th>
+                  <th>性别</th>
+                  <th>学院</th>
+                  <th>课程</th>
+                  <th>状态</th>
+                  <th>操作</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1,001</td>
                   <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
+                  <td>女</td>
+                  <td>国服</td>
+                  <td>c语言</td>
+                  <td>已激活</td>
+                  <td>
+                    <a href="" class="btn btn-primary">查看</a>
+                    <a href="" class="btn btn-success">权限修改</a>
+                    <a href="" class="btn btn-danger">注销</a>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <form action="" method="post" role="form" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-md-3 control-label">请选择学院:</label>
+                  <div class="col-md-7">
+                    <select name="" id="depart">
+                      <option value="1">国服</option>
+                      <option value="2">外国语</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="username" class="col-md-3 control-label">工号:</label>
+                  <div class="col-md-7">
+                    <input id="username" type="text" class="form-control" placeholder="请输入工号" name="username" value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pwd" class="col-md-3 control-label">姓名:</label>
+                  <div class="col-md-7">
+                    <input id="pwd" type="text" class="form-control" placeholder="请输入姓名" name="pwd" value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-offset-3 col-md-2">
+                    <button class="btn btn-primary" id="register">确认</button>
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-default">返回</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <form action="" method="post" role="form" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-md-3 control-label">学院:</label>
+                  <div class="col-md-7">
+                    <input id="depart" type="text" class="form-control"name="pwd" value="" disabled>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="pwd" class="col-md-3 control-label">姓名:</label>
+                  <div class="col-md-7">
+                    <input id="username" type="text" class="form-control" name="pwd" value="" disabled>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="power" class="col-md-3 control-label">权限:</label>
+                  <div class="col-md-7">
+                    <select name="" id="power">
+                      <option value="1">所教课程权限</option>
+                      <option value="2">所在学院权限</option>
+                      <option value="2">管理员权限</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-offset-3 col-md-2">
+                    <button class="btn btn-primary" id="sure">确认</button>
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-default" id="back">返回</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="container-fluid">
+            <div class="row">
+              <form action="" method="post" role="form" class="form-horizontal">
+                <div class="form-group">
+                  <label class="col-md-3 control-label">学院:</label>
+                  <div class="col-md-7">
+                    <select name="" id="depart">
+                      <option value="1">国服</option>
+                      <option value="2">外国语</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label">专业:</label>
+                  <div class="col-md-7">
+                    <select name="" id="major">
+                      <option value="1">软件工程</option>
+                      <option value="2">物联网</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-3 control-label">课程性质:</label>
+                  <div class="col-md-7">
+                    <select name="" id="class-type">
+                      <option value="1">必修</option>
+                      <option value="2">选修</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="class-name" class="col-md-3 control-label">课程名称:</label>
+                  <div class="col-md-7">
+                    <input id="class-name" type="text" class="form-control" placeholder="请输入课程名称" name="class-name" value="">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="class-name" class="col-md-3 control-label">任课教师:</label>
+                  <div class="col-md-7">
+                    <select name="" id="class-type">
+                      <option value="1">老王</option>
+                      <option value="2">小王</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-offset-3 col-md-2">
+                    <button class="btn btn-primary" id="register">确认</button>
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-default">返回</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+
         </div>
       </div>
     </div>
@@ -127,12 +279,12 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="public/js/jquery.min.js"></script>
+    <script src="/public/js/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="public/js/jquery.min.js"><\/script>')</script>
-    <script src="public/bootstrap/js/bootstrap.js"></script>
+    <script src="/public/bootstrap/js/bootstrap.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="public/assets/js/vendor/holder.min.js"></script>
+    <script src="/public/assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="public/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/public/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
